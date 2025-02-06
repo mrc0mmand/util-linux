@@ -150,7 +150,7 @@ jobs:
 
   build-arch:
     name: build (qemu-user, ${{ matrix.arch }})
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     concurrency:
       group: ${{ github.workflow }}-${{ toJSON(matrix) }}-${{ github.ref }}
       cancel-in-progress: true
